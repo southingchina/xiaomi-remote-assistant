@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "xiaomi-rc003",
+  "identity": {
+    "bluetoothNames": [
+      "MI RC",
+      "Xiaomi Bluetooth Remote 2 Pro",
+      "小米蓝牙语音遥控器"
+    ],
+    "hid": {
+      "vendorId": 10007,
+      "productId": 12984
+    }
+  },
+  "model": "RC003",
+  "platform": "windows",
+  "buttons": [
+    {
+      "position": 0,
+      "slot": "0_0",
+      "name": "电源",
+      "hidUsagePage": 7,
+      "hidUsage": 102,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 1,
+      "slot": "1_0",
+      "name": "上",
+      "hidUsagePage": 7,
+      "hidUsage": 82,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 2,
+      "slot": "2_0",
+      "name": "下",
+      "hidUsagePage": 7,
+      "hidUsage": 81,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 3,
+      "slot": "3_0",
+      "name": "左",
+      "hidUsagePage": 7,
+      "hidUsage": 80,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 4,
+      "slot": "4_0",
+      "name": "右",
+      "hidUsagePage": 7,
+      "hidUsage": 79,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 5,
+      "slot": "0_1",
+      "name": "确认",
+      "hidUsagePage": 7,
+      "hidUsage": 40,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 6,
+      "slot": "1_1",
+      "name": "返回",
+      "hidUsagePage": 7,
+      "hidUsage": 241,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": true
+    },
+    {
+      "position": 7,
+      "slot": "2_1",
+      "name": "主页",
+      "hidUsagePage": 7,
+      "hidUsage": 74,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 8,
+      "slot": "3_1",
+      "name": "菜单",
+      "hidUsagePage": 7,
+      "hidUsage": 101,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 9,
+      "slot": "4_1",
+      "name": "语音",
+      "hidUsagePage": 7,
+      "hidUsage": 62,
+      "eventSource": "atvv-control",
+      "windowsTranslationMayDrop": false
+    },
+    {
+      "position": 10,
+      "slot": "0_2",
+      "name": "音量＋",
+      "hidUsagePage": 7,
+      "hidUsage": 128,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": true
+    },
+    {
+      "position": 11,
+      "slot": "1_2",
+      "name": "音量－",
+      "hidUsagePage": 7,
+      "hidUsage": 129,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": true
+    },
+    {
+      "position": 12,
+      "slot": "2_2",
+      "name": "TV",
+      "hidUsagePage": 7,
+      "hidUsage": 53,
+      "eventSource": "device-scoped-input",
+      "windowsTranslationMayDrop": false
+    }
+  ]
+}

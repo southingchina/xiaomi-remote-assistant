@@ -1,0 +1,34 @@
+# Local environments, state and build products
+/.venv/
+/build/
+/dist/
+/release/
+/tools/
+/runtime/
+/evidence/
+/preview/
+__pycache__/
+*.py[cod]
+*.log
+/preview-server.json
+/result.json
+/gui-result.json
+.env
+.env.*
+*.pem
+*.key
+/config.json
+/control.json
+/status.json
+/profiles.json
+/capture-status.json
+/capture-stop.json
+
+# Internal reports; audit-sync reports are explicitly selected for publication
+/docs/capture-report.md
+/docs/dispatch-report.md
+/docs/installer-review.md
+/docs/runtime-report.md
+/docs/superpowers/
+.vscode/
+.idea/

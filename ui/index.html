@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>小米遥控助手 · 测试版</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="qrc:///qtwebchannel/qwebchannel.js" defer></script>
+  <script src="desktop.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="4"/><circle cx="12" cy="9" r="2.5"/><path d="M10 15h4m-2-2v4"/></svg></div>
+      <div class="brand"><h1>小米遥控助手</h1><p>小米遥控器 2 Pro</p></div>
+      <div class="header-status"><span class="preview-pill">0.1 测试版</span><div class="device-state"><span class="connected"><i></i> 未启动</span><span class="battery"><svg viewBox="0 0 28 16" aria-label="电池"><rect x="1" y="2" width="23" height="12" rx="3"/><path d="M27 6v4"/><rect class="battery-level" x="4" y="5" width="17" height="6" rx="1"/></svg><b id="battery-value">—</b><span>%</span></span></div></div>
+    </header>
+
+    <div class="workspace">
+      <main class="mapping-pane">
+        <section class="profile-bar" aria-label="配置管理">
+          <div class="profile-field"><span class="field-eyebrow">当前方案</span><select id="profile-select" aria-label="当前方案"></select></div>
+          <div class="profile-actions"><button id="copy-profile" class="subtle-btn" title="复制当前方案">复制方案</button><span class="divider"></span><button id="export-profile" class="icon-btn" title="导出当前方案" aria-label="导出当前方案"><svg viewBox="0 0 24 24"><path d="M12 15V3m-4 4 4-4 4 4M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg></button><button id="import-profile" class="icon-btn" title="导入方案" aria-label="导入方案"><svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg></button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
+        </section>
+
+        <div class="canvas-intro"><div><span class="device-model">MI REMOTE 2 PRO</span><h2>按键映射</h2></div><span class="key-count">13 个可配置按键</span></div>
+        <section class="remote-stage" id="remote-stage" aria-label="遥控器按键映射">
+          <img class="remote-body" src="rc003-official-front.svg" alt="小米遥控器 2 Pro 完整正面图" draggable="false">
+          <svg class="connection-lines" viewBox="0 0 1000 700" aria-hidden="true"></svg>
+          <div id="key-cards"></div>
+          <div id="key-hotspots"></div>
+        </section>
+        <footer class="canvas-footer"><span><span class="cursor-symbol">↖</span> 点击卡片或遥控器按键，编辑对应动作</span><button id="reset-profile" class="text-btn">恢复当前方案默认值</button></footer>
+      </main>
+
+      <aside class="editor-pane" aria-label="按键设置">
+        <div class="editor-heading"><span class="field-eyebrow">按键设置</span><span id="dirty-indicator" class="saved-indicator">已保存</span></div>
+        <div class="selected-key"><span id="selected-icon" class="selected-icon"></span><div><h2 id="selected-name"></h2><p id="selected-subtitle"></p></div></div>
+        <form id="key-form" novalidate>
+          <label class="form-label" for="action-type">动作类型</label>
+          <select id="action-type"><option value="keyboard">键盘按键 / 快捷键</option><option value="mouse">鼠标操作</option><option value="app">应用动作</option><option value="voice">千问语音</option><option value="disabled">不执行动作</option></select>
+          <div id="action-fields"></div>
+          <div id="mode-section"><div class="label-row"><label class="form-label">触发方式</label><span class="tiny-label">按住行为</span></div><div class="mode-control" id="mode-control" role="group" aria-label="触发方式"></div><p id="mode-hint" class="field-hint"></p></div>
+          <div id="parameter-fields"></div>
+          <div class="behavior-note" id="behavior-note"></div>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <div class="editor-actions"><button id="save-key" type="submit" class="primary-btn"><svg viewBox="0 0 20 20"><path d="m5 10 3 3 7-7"/></svg><span>保存按键配置</span></button><button id="reset-key" class="secondary-btn" type="button">恢复此键默认值</button></div>
+        </form>
+        <div class="preview-note"><span class="note-icon">i</span><p>配置保存在本机。<br>启动服务并启用增强按键后生效；请先完成蓝牙配对。</p></div>
+      </aside>
+    </div>
+    <div class="bottom-bar"><span><span class="mini-dot"></span> 独立遥控控制</span><span><span id="runtime-status">控制服务尚未启动</span></span></div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

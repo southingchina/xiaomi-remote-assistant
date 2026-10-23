@@ -1,0 +1,29 @@
+小米遥控助手测试版源代码按 GNU GPL v3 发布，完整文本见 LICENSE。
+
+MiRemoteVibe / remote-bridge-hub:
+capture_support.py 包含从 miremote/tapinject.py 整理的 Windows 注入原语；
+相关文件为 GPL v3，来源与原始许可见 vendor/miremote。
+
+Frida Gadget 17.15.3:
+随包附带官方 Windows x86_64 Gadget 压缩二进制，按 wxWindows Library Licence 3.1 等许可证分发。
+具体版权、许可证与上游源码地址见 vendor/frida。
+
+Python 3.11: Python Software Foundation License https://docs.python.org/3/license.html
+PySide6 / Qt 6.8.3: LGPL v3 / GPL / 第三方许可证 https://doc.qt.io/qt-6/licensing.html
+本程序动态加载 Qt 库，未禁止用户替换或调试这些动态库。
+WinRT Python: MIT https://github.com/pywinrt/pywinrt
+python-sounddevice: MIT https://github.com/spatialaudio/python-sounddevice
+PortAudio: MIT https://www.portaudio.com/license.html
+NumPy: BSD-3-Clause https://numpy.org/doc/stable/license.html
+PyInstaller: GPL with bootloader exception https://pyinstaller.org/en/stable/license.html
+
+同版本对应源代码 ZIP 包随安装目录提供。运行所需 Qt/Python/WinRT 动态组件位于 _internal。
+程序不会安装 Ulanzi，也不复制任何用户账户、设备校准或控制令牌。
+
+界面遥控器产品图：
+ui/rc003-official-front.svg 来自小米商城“小米蓝牙遥控器 2 Pro”产品图。
+产品页：https://www.mi.com/shop/buy/detail?product_id=23714
+原图：https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/D5AEE02AB01C470A83B30E0A5F48F73A.png
+原 PNG 未改动，SVG viewBox 裁切透明边缘。
+相关商标与图片权利归各自权利人；项目 GPL 仅涵盖项目代码，不对该图授予额外权利。
+来源记录不代表图片具有开放许可。本项目不是小米官方产品。
